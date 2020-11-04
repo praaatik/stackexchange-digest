@@ -6,6 +6,12 @@
   justify-content: flex-start;
   border-bottom: 8px solid;
   transition: 400ms all ease-in;
+  text-decoration: none;
+
+  &::after,
+  *::before {
+    text-decoration: none;
+  }
 
   .home {
     text-decoration: none;

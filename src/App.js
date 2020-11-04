@@ -1,7 +1,12 @@
 //libraries
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  HashRouter,
+} from "react-router-dom";
 
 //components
 import CardHolder from "./components/CardHolder";
@@ -53,7 +58,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-      <Router basename={process.env.PUBLIC_URL}>
+      <HashRouter basename={process.env.PUBLIC_URL}>
         <div className="App">
           <GlobalStyles />
           <Navbar />
@@ -75,7 +80,7 @@ function App() {
             ></Route>
           </Switch>
         </div>
-      </Router>
+      </HashRouter>
     </ThemeProvider>
   );
 }
