@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/stackexchange-digest/static/css/main.840ea004.chunk.css",
+    "main.js": "/stackexchange-digest/static/js/main.43e3c278.chunk.js",
+    "main.js.map": "/stackexchange-digest/static/js/main.43e3c278.chunk.js.map",
+    "runtime-main.js": "/stackexchange-digest/static/js/runtime-main.0fdd2c68.js",
+    "runtime-main.js.map": "/stackexchange-digest/static/js/runtime-main.0fdd2c68.js.map",
+    "static/js/2.6bc43f1d.chunk.js": "/stackexchange-digest/static/js/2.6bc43f1d.chunk.js",
+    "static/js/2.6bc43f1d.chunk.js.map": "/stackexchange-digest/static/js/2.6bc43f1d.chunk.js.map",
+    "static/js/3.c63b83c2.chunk.js": "/stackexchange-digest/static/js/3.c63b83c2.chunk.js",
+    "static/js/3.c63b83c2.chunk.js.map": "/stackexchange-digest/static/js/3.c63b83c2.chunk.js.map",
+    "index.html": "/stackexchange-digest/index.html",
+    "static/css/main.840ea004.chunk.css.map": "/stackexchange-digest/static/css/main.840ea004.chunk.css.map",
+    "static/js/2.6bc43f1d.chunk.js.LICENSE.txt": "/stackexchange-digest/static/js/2.6bc43f1d.chunk.js.LICENSE.txt",
+    "static/media/moon.230bed42.svg": "/stackexchange-digest/static/media/moon.230bed42.svg",
+    "static/media/question-dark.c0bf8b2f.svg": "/stackexchange-digest/static/media/question-dark.c0bf8b2f.svg",
+    "static/media/question-light.11adbd0a.svg": "/stackexchange-digest/static/media/question-light.11adbd0a.svg",
+    "static/media/sun.2d358aa0.svg": "/stackexchange-digest/static/media/sun.2d358aa0.svg",
+    "static/media/view-dark.dca5f315.svg": "/stackexchange-digest/static/media/view-dark.dca5f315.svg",
+    "static/media/view-light.e737dd0b.svg": "/stackexchange-digest/static/media/view-light.e737dd0b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0fdd2c68.js",
+    "static/js/2.6bc43f1d.chunk.js",
+    "static/css/main.840ea004.chunk.css",
+    "static/js/main.43e3c278.chunk.js"
+  ]
+}
