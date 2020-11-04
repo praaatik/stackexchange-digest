@@ -1,0 +1,44 @@
+.card {
+  // border: 7px solid turquoise;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5em;
+  border-radius: 10px;
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    // font-weight: 600;
+  }
+
+  &--viewmore {
+    cursor: pointer;
+    padding: 1rem;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 1rem;
+    opacity: 50%;
+
+    &:hover {
+      opacity: 100%;
+    }
+  }
+
+  .site-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: default;
+  }
+}

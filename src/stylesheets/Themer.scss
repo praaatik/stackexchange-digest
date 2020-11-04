@@ -1,0 +1,16 @@
+.themer {
+  position: absolute;
+  right: 4%;
+  top: 4%;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
