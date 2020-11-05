@@ -24,12 +24,17 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./styled-components/theme";
 
 function App() {
+  const currentTheme = localStorage.getItem("theme");
+  currentTheme === null ? console.log("it is null") : console.log("notnull");
+
   const [questions, setQuestions] = useState([]);
   const [title, setTitle] = useState([]);
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState(
+  // currentTheme === null ? "dark" : currentTheme
+  // );
+
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const siteURLs = [];
-  const primaryURLs = [];
-  const secondaryURLs = [];
 
   const fetchData = () => {
     sites.map((s) => {
@@ -50,7 +55,16 @@ function App() {
 
   function themeToggle() {
     theme === "light" ? setTheme("dark") : setTheme("light");
+    // console.log("Theme is now " + theme);
+    // localStorage.setItem("theme", theme);
+    // console.log("Item in storage is now " + theme);
+    // console.log(`Theme in storage is: ${localStorage.getItem("themer")}`);
   }
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    console.log(`theme updated to ${theme}`);
+  }, [theme]);
 
   useEffect(() => {
     fetchData();

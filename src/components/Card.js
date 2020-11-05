@@ -3,7 +3,7 @@ import "../stylesheets/Card.scss";
 import { Link } from "react-router-dom";
 
 function Card(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <div className={[props.class, "card"].join(" ")}>
       <p className="site-name">{props.siteName}</p>
