@@ -1,3 +1,5 @@
+//This is for the specific sites
+
 @import "./variables";
 
 .question-card--parent {
@@ -59,6 +61,7 @@
         text-align: center;
         margin: 5px;
         border-radius: 10px;
+        cursor: pointer;
       }
     }
 

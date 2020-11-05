@@ -14,6 +14,7 @@ import { sites } from "./sites";
 import SpecificCard from "./components/SpecificCard";
 import Themer from "./components/Themer";
 import Navbar from "./components/Navbar";
+import Tag from "./components/Tag";
 
 //stylesheets
 import "./stylesheets/App.scss";
@@ -29,17 +30,13 @@ function App() {
 
   const [questions, setQuestions] = useState([]);
   const [title, setTitle] = useState([]);
-  // const [theme, setTheme] = useState(
-  // currentTheme === null ? "dark" : currentTheme
-  // );
-
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
   const siteURLs = [];
 
   const fetchData = () => {
     sites.map((s) => {
       siteURLs.push(
-        `https://api.stackexchange.com/2.2/questions?order=desc&sort=creation&site=${s}&filter=!L_(IB3Vfl8G6UL78mkS_Nm`
+        `https://api.stackexchange.com/2.2/questions?order=desc&sort=hot&site=${s}&filter=!L_(IB3Vfl8G6UL78mkS_Nm`
       );
     });
 
@@ -55,10 +52,6 @@ function App() {
 
   function themeToggle() {
     theme === "light" ? setTheme("dark") : setTheme("light");
-    // console.log("Theme is now " + theme);
-    // localStorage.setItem("theme", theme);
-    // console.log("Item in storage is now " + theme);
-    // console.log(`Theme in storage is: ${localStorage.getItem("themer")}`);
   }
 
   useEffect(() => {
@@ -90,6 +83,11 @@ function App() {
             <Route
               path="/specific/:id"
               render={(props) => <SpecificCard theme={theme} {...props} />}
+              exact
+            ></Route>
+            <Route
+              path="/specific/tag/:id"
+              render={(props) => <Tag {...props} />}
               exact
             ></Route>
           </Switch>

@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 import "../stylesheets/SpecificCard.scss";
@@ -10,20 +11,15 @@ import QuestionLight from "../images/question-light.svg";
 
 import ScrollToTopButton from "./ScrollToTopButton";
 
-// function SpecificCard(props) {
-//   console.log(props.match.params.id);
-//   return <div>Hey</div>;
-// }
-
 function SpecificCard(props) {
-  console.log(props.theme);
+  // console.log(props.theme);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const parentRef = useRef(null);
-
   const siteName = props.match.params.id;
   const URL = `https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&site=${siteName}&filter=!LaSRLvM3aoFvP_FHtdS2mM`;
+
+  const history = useHistory();
 
   const fetchData = () => {
     axios.get(URL).then((response) => {
@@ -47,19 +43,23 @@ function SpecificCard(props) {
     });
   };
 
+  //The below function will push in history the siteName and the path.
+  //Sitename and tagname are collectively used to fetch the data from the API.
+  //Look in the definition of the Route in App.js, line number 88 (at the time of writing)
+  //Refer - https://stackoverflow.com/a/60809812/6438526
+  function handleTagClick(tagName) {
+    let path = `/specific/tag/${tagName}`;
+    history.push({ pathname: path, siteName: siteName });
+  }
+
   useEffect(() => {
     fetchData();
     setLoading(false);
-    // setTimeout(() => {
-    //   const parentRefNode = parentRef.current;
-    //   console.log(parentRefNode.classList);
-    //   parentRefNode.classList.add("light");
-    // }, 10000);
   }, []);
 
   return (
-    <div className="question-card--parent" id="parent" ref={parentRef}>
-      {console.log(`Loading is: ${loading}`)}
+    <div className="question-card--parent" id="parent">
+      {/* {console.log(`Loading is: ${loading}`)} */}
       {data.map((d, index) => {
         return (
           <div className="question-card">
@@ -78,7 +78,11 @@ function SpecificCard(props) {
             </div>
             <div className="tag-holder">
               {d.tags.map((tag) => {
-                return <div className="tags">{tag}</div>;
+                return (
+                  <div className="tags" onClick={() => handleTagClick(tag)}>
+                    {tag}
+                  </div>
+                );
               })}
             </div>
             <div className="meta-data">
