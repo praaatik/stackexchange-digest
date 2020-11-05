@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/stackexchange-digest/static/css/main.9591101d.chunk.css",
-    "main.js": "/stackexchange-digest/static/js/main.987c33a3.chunk.js",
-    "main.js.map": "/stackexchange-digest/static/js/main.987c33a3.chunk.js.map",
+    "main.css": "/stackexchange-digest/static/css/main.ffceace3.chunk.css",
+    "main.js": "/stackexchange-digest/static/js/main.db781c21.chunk.js",
+    "main.js.map": "/stackexchange-digest/static/js/main.db781c21.chunk.js.map",
     "runtime-main.js": "/stackexchange-digest/static/js/runtime-main.0fdd2c68.js",
     "runtime-main.js.map": "/stackexchange-digest/static/js/runtime-main.0fdd2c68.js.map",
     "static/js/2.72b57928.chunk.js": "/stackexchange-digest/static/js/2.72b57928.chunk.js",
@@ -10,11 +10,12 @@
     "static/js/3.c63b83c2.chunk.js": "/stackexchange-digest/static/js/3.c63b83c2.chunk.js",
     "static/js/3.c63b83c2.chunk.js.map": "/stackexchange-digest/static/js/3.c63b83c2.chunk.js.map",
     "index.html": "/stackexchange-digest/index.html",
-    "static/css/main.9591101d.chunk.css.map": "/stackexchange-digest/static/css/main.9591101d.chunk.css.map",
+    "static/css/main.ffceace3.chunk.css.map": "/stackexchange-digest/static/css/main.ffceace3.chunk.css.map",
     "static/js/2.72b57928.chunk.js.LICENSE.txt": "/stackexchange-digest/static/js/2.72b57928.chunk.js.LICENSE.txt",
     "static/media/moon.230bed42.svg": "/stackexchange-digest/static/media/moon.230bed42.svg",
     "static/media/question-dark.c0bf8b2f.svg": "/stackexchange-digest/static/media/question-dark.c0bf8b2f.svg",
     "static/media/question-light.11adbd0a.svg": "/stackexchange-digest/static/media/question-light.11adbd0a.svg",
+    "static/media/scrollToTopButtonIcon.6bbbe1d9.svg": "/stackexchange-digest/static/media/scrollToTopButtonIcon.6bbbe1d9.svg",
     "static/media/sun.2d358aa0.svg": "/stackexchange-digest/static/media/sun.2d358aa0.svg",
     "static/media/view-dark.dca5f315.svg": "/stackexchange-digest/static/media/view-dark.dca5f315.svg",
     "static/media/view-light.e737dd0b.svg": "/stackexchange-digest/static/media/view-light.e737dd0b.svg"
@@ -22,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.0fdd2c68.js",
     "static/js/2.72b57928.chunk.js",
-    "static/css/main.9591101d.chunk.css",
-    "static/js/main.987c33a3.chunk.js"
+    "static/css/main.ffceace3.chunk.css",
+    "static/js/main.db781c21.chunk.js"
   ]
 }
