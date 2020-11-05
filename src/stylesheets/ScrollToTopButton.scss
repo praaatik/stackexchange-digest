@@ -2,18 +2,21 @@
   position: fixed;
   right: 1.5%;
   bottom: 5%;
-  // opacity: 50%;
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  //   border: 5px solid;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 300ms ease-in;
+  cursor: pointer;
 
   &:hover {
-    // opacity: 70%;
     transition: 300ms ease-in;
   }
+}
+
+.scroll-top-icon {
+  width: 30px;
+  height: 30px;
 }

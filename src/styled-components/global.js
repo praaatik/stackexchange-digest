@@ -79,8 +79,6 @@ body{
         border: 5px solid ${({ theme }) => theme.scrollTopBorder};
     }
 
-    .scroll-top-icon{
-        fill: ${({ theme }) => theme.scrollTopBorder}
-    }
+    
 }
 `;
