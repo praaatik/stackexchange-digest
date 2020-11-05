@@ -1,0 +1,22 @@
+.question {
+  padding: 0.5rem;
+  padding-bottom: 0.8rem;
+  font-weight: 700;
+
+  .no-answer {
+    padding: 1.5rem;
+    border-bottom: 6.5px solid rgb(255, 174, 174);
+  }
+
+  .answer {
+    padding: 1.5rem;
+    border-radius: 3px;
+    border-bottom: 6.5px solid rgb(174, 174, 255);
+  }
+
+  .title {
+    text-decoration: none;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}

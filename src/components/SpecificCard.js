@@ -1,15 +1,21 @@
+//libraries
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 
+//stylesheets
 import "../stylesheets/SpecificCard.scss";
 
+//images
 import ViewDark from "../images/view-dark.svg";
 import QuestionDark from "../images/question-dark.svg";
 import ViewLight from "../images/view-light.svg";
 import QuestionLight from "../images/question-light.svg";
 
+//components
 import ScrollToTopButton from "./ScrollToTopButton";
+import Question from "./Question";
+import MetaData from "./MetaData";
 
 function SpecificCard(props) {
   // console.log(props.theme);
@@ -63,7 +69,13 @@ function SpecificCard(props) {
       {data.map((d, index) => {
         return (
           <div className="question-card">
-            <div className="question">
+            {/* one */}
+            <Question
+              link={d.link}
+              title={d.title}
+              answerCount={props.answerCount}
+            />
+            {/* <div className="question">
               <a
                 href={d.link}
                 target="_blank"
@@ -75,7 +87,9 @@ function SpecificCard(props) {
                   className={d.answerCount === 0 ? "no-answer" : "answer"}
                 ></div>
               </a>
-            </div>
+            </div> */}
+            {/* two */}
+
             <div className="tag-holder">
               {d.tags.map((tag) => {
                 return (
@@ -85,7 +99,17 @@ function SpecificCard(props) {
                 );
               })}
             </div>
-            <div className="meta-data">
+
+            {/* three */}
+
+            <MetaData
+              theme={d.theme}
+              viewCount={d.viewCount}
+              answerCount={d.answerCount}
+              ownerProfileLink={d.ownerProfileLink}
+              ownerProfilePhoto={d.ownerProfilePhoto}
+            />
+            {/* <div className="meta-data">
               <div className="meta-data--left">
                 <div className="view-count">
                   <img
@@ -108,7 +132,7 @@ function SpecificCard(props) {
                   <p dangerouslySetInnerHTML={{ __html: d.ownerName }}></p>
                 </div>
               </a>
-            </div>
+            </div> */}
             <span className="index">{index + 1}</span>
           </div>
         );
