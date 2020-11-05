@@ -6,12 +6,6 @@ import axios from "axios";
 //stylesheets
 import "../stylesheets/SpecificCard.scss";
 
-//images
-import ViewDark from "../images/view-dark.svg";
-import QuestionDark from "../images/question-dark.svg";
-import ViewLight from "../images/view-light.svg";
-import QuestionLight from "../images/question-light.svg";
-
 //components
 import ScrollToTopButton from "./ScrollToTopButton";
 import Question from "./Question";
@@ -108,6 +102,7 @@ function SpecificCard(props) {
               answerCount={d.answerCount}
               ownerProfileLink={d.ownerProfileLink}
               ownerProfilePhoto={d.ownerProfilePhoto}
+              ownerName={d.ownerName}
             />
             {/* <div className="meta-data">
               <div className="meta-data--left">

@@ -1,9 +1,19 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+
+import ScrollToTopButton from "./ScrollToTopButton";
+import Question from "./Question";
+import MetaData from "./MetaData";
+
+import "../stylesheets/SpecificCard.scss";
 
 function Tag(props) {
   const [data, setData] = useState([]);
   const URL = `https://api.stackexchange.com/2.2/questions?order=desc&sort=activity&tagged=${props.match.params.id}&site=${props.location.siteName}`;
+
+  const history = useHistory();
+  const siteName = props.match.params.id;
 
   const fetchData = () => {
     axios.get(URL).then((response) => {
@@ -27,12 +37,95 @@ function Tag(props) {
     });
   };
 
+  function handleTagClick(tagName) {
+    let path = `/specific/tag/${tagName}`;
+    history.push({ pathname: path, siteName: siteName });
+  }
+
   useEffect(() => {
     fetchData();
   }, []);
 
-    console.log(data);
-  return <div>{props.match.params.id}</div>;
+  console.log(data);
+  return (
+    <div className="question-card--parent" id="parent">
+      {/* {console.log(`Loading is: ${loading}`)} */}
+      {data.map((d, index) => {
+        return (
+          <div className="question-card">
+            {/* one */}
+            <Question
+              link={d.link}
+              title={d.title}
+              answerCount={props.answerCount}
+            />
+            {/* <div className="question">
+          <a
+            href={d.link}
+            target="_blank"
+            rel="noreferrer"
+            className={"title"}
+          >
+            <div
+              dangerouslySetInnerHTML={{ __html: d.title }}
+              className={d.answerCount === 0 ? "no-answer" : "answer"}
+            ></div>
+          </a>
+        </div> */}
+            {/* two */}
+
+            <div className="tag-holder">
+              {d.tags.map((tag) => {
+                return (
+                  <div className="tags" onClick={() => handleTagClick(tag)}>
+                    {tag}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* three */}
+
+            <MetaData
+              theme={d.theme}
+              viewCount={d.viewCount}
+              answerCount={d.answerCount}
+              ownerProfileLink={d.ownerProfileLink}
+              ownerProfilePhoto={d.ownerProfilePhoto}
+              ownerName={d.ownerName}
+            />
+            {/* <div className="meta-data">
+          <div className="meta-data--left">
+            <div className="view-count">
+              <img
+                src={props.theme === "dark" ? ViewLight : ViewDark}
+                alt="view icon"
+              ></img>
+              <span>{d.viewCount}</span>
+            </div>
+            <div className="answer-count">
+              <img
+                src={props.theme === "dark" ? QuestionLight : QuestionDark}
+                alt="question icon"
+              ></img>
+              <span>{d.answerCount}</span>
+            </div>
+          </div>
+          <a href={d.ownerProfileLink} target="_blank" rel="noreferrer">
+            <div className="meta-data--right">
+              <img src={d.ownerProfilePhoto} alt={d.ownerName} />
+              <p dangerouslySetInnerHTML={{ __html: d.ownerName }}></p>
+            </div>
+          </a>
+        </div> */}
+            <span className="index">{index + 1}</span>
+          </div>
+        );
+      })}
+
+      <ScrollToTopButton />
+    </div>
+  );
 }
 
 export default Tag;
