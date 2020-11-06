@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/stackexchange-digest/static/css/main.7a9659ca.chunk.css",
-    "main.js": "/stackexchange-digest/static/js/main.b2be58e5.chunk.js",
-    "main.js.map": "/stackexchange-digest/static/js/main.b2be58e5.chunk.js.map",
+    "main.css": "/stackexchange-digest/static/css/main.665c68ad.chunk.css",
+    "main.js": "/stackexchange-digest/static/js/main.6476a984.chunk.js",
+    "main.js.map": "/stackexchange-digest/static/js/main.6476a984.chunk.js.map",
     "runtime-main.js": "/stackexchange-digest/static/js/runtime-main.c727533b.js",
     "runtime-main.js.map": "/stackexchange-digest/static/js/runtime-main.c727533b.js.map",
     "static/js/2.acc39768.chunk.js": "/stackexchange-digest/static/js/2.acc39768.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.2c9d85f4.chunk.js": "/stackexchange-digest/static/js/3.2c9d85f4.chunk.js",
     "static/js/3.2c9d85f4.chunk.js.map": "/stackexchange-digest/static/js/3.2c9d85f4.chunk.js.map",
     "index.html": "/stackexchange-digest/index.html",
-    "static/css/main.7a9659ca.chunk.css.map": "/stackexchange-digest/static/css/main.7a9659ca.chunk.css.map",
+    "static/css/main.665c68ad.chunk.css.map": "/stackexchange-digest/static/css/main.665c68ad.chunk.css.map",
     "static/js/2.acc39768.chunk.js.LICENSE.txt": "/stackexchange-digest/static/js/2.acc39768.chunk.js.LICENSE.txt",
     "static/media/moon.230bed42.svg": "/stackexchange-digest/static/media/moon.230bed42.svg",
     "static/media/question-dark.c0bf8b2f.svg": "/stackexchange-digest/static/media/question-dark.c0bf8b2f.svg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.c727533b.js",
     "static/js/2.acc39768.chunk.js",
-    "static/css/main.7a9659ca.chunk.css",
-    "static/js/main.b2be58e5.chunk.js"
+    "static/css/main.665c68ad.chunk.css",
+    "static/js/main.6476a984.chunk.js"
   ]
 }
