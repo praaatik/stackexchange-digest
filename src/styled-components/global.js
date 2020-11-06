@@ -72,7 +72,11 @@ body{
 
     .card--viewmore{
         color: ${({ theme }) => theme.titleColor};
-        border: 5px solid  ${({ theme }) => theme.borderColor};
+    }
+
+    .left__border, .right__border, .top__border, .bottom__border{
+        background: ${({ theme }) => theme.borderColor};
+        transition: all 160ms ease-in;
     }
 
     .scroll-top-button{

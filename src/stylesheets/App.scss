@@ -16,6 +16,8 @@
   border-radius: 50%;
   cursor: pointer;
   transition: 400ms all ease-in;
+  outline: none;
+  border: none;
 
   ::selection {
     background: transparent;

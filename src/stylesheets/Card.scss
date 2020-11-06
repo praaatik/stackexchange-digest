@@ -1,7 +1,6 @@
 //This is for the home page
 
 .card {
-  // border: 7px solid turquoise;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -19,7 +18,6 @@
     text-decoration: none;
     color: black;
     text-align: center;
-    // font-weight: 600;
   }
 
   &--viewmore {
@@ -33,6 +31,51 @@
     margin-bottom: 1rem;
     position: relative;
     font-size: 1rem;
+
+    .left__border {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 2em;
+    }
+
+    .top__border {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 2em;
+      height: 4px;
+    }
+
+    .right__border {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 4px;
+      height: 2em;
+    }
+
+    .bottom__border {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 2em;
+      height: 4px;
+    }
+
+    &:hover {
+      transition: all 160ms ease-in;
+      .left__border,
+      .right__border {
+        height: 100%;
+      }
+
+      .top__border,
+      .bottom__border {
+        width: 100%;
+      }
+    }
   }
 
   .site-name {

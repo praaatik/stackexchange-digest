@@ -13,7 +13,13 @@ function Card(props) {
         <div dangerouslySetInnerHTML={{ __html: props.title }}></div>
       </a>
       <Link to={`/specific/${props.siteName}`}>
-        <div className="card--viewmore">View Questions</div>
+        <div className="card--viewmore">
+          View Questions
+          <span className="left__border"></span>
+          <span className="right__border"></span>
+          <span className="top__border"></span>
+          <span className="bottom__border"></span>
+        </div>
       </Link>
     </div>
   );
