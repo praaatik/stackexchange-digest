@@ -15,6 +15,7 @@ import SpecificCard from "./components/SpecificCard";
 import Themer from "./components/Themer";
 import Navbar from "./components/Navbar";
 import Tag from "./components/Tag";
+import Footer from "./components/Footer";
 
 //stylesheets
 import "./stylesheets/App.scss";
@@ -91,6 +92,7 @@ function App() {
               exact
             ></Route>
           </Switch>
+          <Footer />
         </div>
       </HashRouter>
     </ThemeProvider>

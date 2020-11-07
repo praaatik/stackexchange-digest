@@ -8,11 +8,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 300ms ease-in;
+  transition: 150ms ease-in;
   cursor: pointer;
 
   &:hover {
-    transition: 300ms ease-in;
+    transition: 150ms ease-in;
+    transform: scale(1.05);
   }
 }
 

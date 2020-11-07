@@ -12,7 +12,6 @@ import Question from "./Question";
 import MetaData from "./MetaData";
 
 function SpecificCard(props) {
-  // console.log(props.theme);
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -59,30 +58,14 @@ function SpecificCard(props) {
 
   return (
     <div className="question-card--parent" id="parent">
-      {/* {console.log(`Loading is: ${loading}`)} */}
       {data.map((d, index) => {
         return (
           <div className="question-card">
-            {/* one */}
             <Question
               link={d.link}
               title={d.title}
-              answerCount={props.answerCount}
+              answerCount={d.answerCount}
             />
-            {/* <div className="question">
-              <a
-                href={d.link}
-                target="_blank"
-                rel="noreferrer"
-                className={"title"}
-              >
-                <div
-                  dangerouslySetInnerHTML={{ __html: d.title }}
-                  className={d.answerCount === 0 ? "no-answer" : "answer"}
-                ></div>
-              </a>
-            </div> */}
-            {/* two */}
 
             <div className="tag-holder">
               {d.tags.map((tag) => {
@@ -94,8 +77,6 @@ function SpecificCard(props) {
               })}
             </div>
 
-            {/* three */}
-
             <MetaData
               theme={d.theme}
               viewCount={d.viewCount}
@@ -104,30 +85,6 @@ function SpecificCard(props) {
               ownerProfilePhoto={d.ownerProfilePhoto}
               ownerName={d.ownerName}
             />
-            {/* <div className="meta-data">
-              <div className="meta-data--left">
-                <div className="view-count">
-                  <img
-                    src={props.theme === "dark" ? ViewLight : ViewDark}
-                    alt="view icon"
-                  ></img>
-                  <span>{d.viewCount}</span>
-                </div>
-                <div className="answer-count">
-                  <img
-                    src={props.theme === "dark" ? QuestionLight : QuestionDark}
-                    alt="question icon"
-                  ></img>
-                  <span>{d.answerCount}</span>
-                </div>
-              </div>
-              <a href={d.ownerProfileLink} target="_blank" rel="noreferrer">
-                <div className="meta-data--right">
-                  <img src={d.ownerProfilePhoto} alt={d.ownerName} />
-                  <p dangerouslySetInnerHTML={{ __html: d.ownerName }}></p>
-                </div>
-              </a>
-            </div> */}
             <span className="index">{index + 1}</span>
           </div>
         );

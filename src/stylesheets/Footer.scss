@@ -1,6 +1,14 @@
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  background: black;
+  text-align: center;
+  img {
+    width: 30px;
+    height: 30px;
+    transition: all ease-in 150ms;
+
+    &:hover {
+      transform: scale(1.15);
+      transition: all ease-in 150ms;
+    }
+  }
 }
