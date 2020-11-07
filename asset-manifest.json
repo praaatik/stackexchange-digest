@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/stackexchange-digest/static/css/main.665c68ad.chunk.css",
-    "main.js": "/stackexchange-digest/static/js/main.6476a984.chunk.js",
-    "main.js.map": "/stackexchange-digest/static/js/main.6476a984.chunk.js.map",
-    "runtime-main.js": "/stackexchange-digest/static/js/runtime-main.c727533b.js",
-    "runtime-main.js.map": "/stackexchange-digest/static/js/runtime-main.c727533b.js.map",
+    "main.css": "/stackexchange-digest/static/css/main.5347b05d.chunk.css",
+    "main.js": "/stackexchange-digest/static/js/main.b6f4a626.chunk.js",
+    "main.js.map": "/stackexchange-digest/static/js/main.b6f4a626.chunk.js.map",
+    "runtime-main.js": "/stackexchange-digest/static/js/runtime-main.8bdbd305.js",
+    "runtime-main.js.map": "/stackexchange-digest/static/js/runtime-main.8bdbd305.js.map",
     "static/js/2.acc39768.chunk.js": "/stackexchange-digest/static/js/2.acc39768.chunk.js",
     "static/js/2.acc39768.chunk.js.map": "/stackexchange-digest/static/js/2.acc39768.chunk.js.map",
-    "static/js/3.2c9d85f4.chunk.js": "/stackexchange-digest/static/js/3.2c9d85f4.chunk.js",
-    "static/js/3.2c9d85f4.chunk.js.map": "/stackexchange-digest/static/js/3.2c9d85f4.chunk.js.map",
+    "static/js/3.3a8e30a7.chunk.js": "/stackexchange-digest/static/js/3.3a8e30a7.chunk.js",
+    "static/js/3.3a8e30a7.chunk.js.map": "/stackexchange-digest/static/js/3.3a8e30a7.chunk.js.map",
     "index.html": "/stackexchange-digest/index.html",
-    "static/css/main.665c68ad.chunk.css.map": "/stackexchange-digest/static/css/main.665c68ad.chunk.css.map",
+    "static/css/main.5347b05d.chunk.css.map": "/stackexchange-digest/static/css/main.5347b05d.chunk.css.map",
     "static/js/2.acc39768.chunk.js.LICENSE.txt": "/stackexchange-digest/static/js/2.acc39768.chunk.js.LICENSE.txt",
+    "static/media/github-icon.95372804.svg": "/stackexchange-digest/static/media/github-icon.95372804.svg",
     "static/media/moon.230bed42.svg": "/stackexchange-digest/static/media/moon.230bed42.svg",
     "static/media/question-dark.c0bf8b2f.svg": "/stackexchange-digest/static/media/question-dark.c0bf8b2f.svg",
     "static/media/question-light.11adbd0a.svg": "/stackexchange-digest/static/media/question-light.11adbd0a.svg",
@@ -21,9 +22,9 @@
     "static/media/view-light.e737dd0b.svg": "/stackexchange-digest/static/media/view-light.e737dd0b.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c727533b.js",
+    "static/js/runtime-main.8bdbd305.js",
     "static/js/2.acc39768.chunk.js",
-    "static/css/main.665c68ad.chunk.css",
-    "static/js/main.6476a984.chunk.js"
+    "static/css/main.5347b05d.chunk.css",
+    "static/js/main.b6f4a626.chunk.js"
   ]
 }
