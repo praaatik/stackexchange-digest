@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 //stylesheets
 import "../stylesheets/SpecificCard.scss";
@@ -38,6 +39,7 @@ function SpecificCard(props) {
             ownerProfilePhoto: d.owner.profile_image,
           })
         );
+        setLoading(false);
       });
     });
   };
@@ -53,10 +55,22 @@ function SpecificCard(props) {
 
   useEffect(() => {
     fetchData();
-    setLoading(false);
+    // setLoading(false);
   }, []);
 
-  return (
+  return loading ? (
+    <CircularProgress
+      color="black"
+      style={{
+        position: "absolute",
+        marginLeft: "auto",
+        marginRight: "auto",
+        left: "0",
+        right: "0",
+        top: "50%",
+      }}
+    />
+  ) : (
     <div className="question-card--parent" id="parent">
       {data.map((d, index) => {
         return (

@@ -7,6 +7,7 @@ import {
   Route,
   HashRouter,
 } from "react-router-dom";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 //components
 import CardHolder from "./components/CardHolder";
@@ -26,12 +27,11 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme } from "./styled-components/theme";
 
 function App() {
-  const currentTheme = localStorage.getItem("theme");
-  currentTheme === null ? console.log("it is null") : console.log("notnull");
-
   const [questions, setQuestions] = useState([]);
   const [title, setTitle] = useState([]);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [loading, setLoading] = useState(true);
+
   const siteURLs = [];
 
   const fetchData = () => {
@@ -47,6 +47,7 @@ function App() {
           setQuestions((questions) => questions.concat(a.data.items[0].link));
           setTitle((title) => title.concat(a.data.items[0].title));
         });
+        setLoading(false);
       })
     );
   };
@@ -57,7 +58,6 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
-    console.log(`theme updated to ${theme}`);
   }, [theme]);
 
   useEffect(() => {
@@ -71,27 +71,42 @@ function App() {
           <GlobalStyles />
           <Navbar />
           <Themer clicked={themeToggle} currentTheme={theme} />
-          <Switch>
-            <Route path="/" exact>
-              <CardHolder sites={sites} questions={questions} title={title} />
-            </Route>
+          {loading ? (
+            <CircularProgress
+              color="black"
+              style={{
+                position: "absolute",
+                marginLeft: "auto",
+                marginRight: "auto",
+                left: "0",
+                right: "0",
+                top: "50%",
+              }}
+            />
+          ) : (
+            <Switch>
+              <Route path="/" exact>
+                <CardHolder sites={sites} questions={questions} title={title} />
+              </Route>
 
-            {/* <Route path="/specific/:id" component={SpecificCard} exact></Route> */}
+              {/* <Route path="/specific/:id" component={SpecificCard} exact></Route> */}
 
-            {/* notice the ...props which have been passed, it is needed to pass in the default props as well */}
-            {/* Also notice the usage of render instead of component to avoid re-mounting */}
-            {/* Refer = https://stackoverflow.com/a/43299633/6438526 */}
-            <Route
-              path="/specific/:id"
-              render={(props) => <SpecificCard theme={theme} {...props} />}
-              exact
-            ></Route>
-            <Route
-              path="/specific/tag/:id"
-              render={(props) => <Tag {...props} />}
-              exact
-            ></Route>
-          </Switch>
+              {/* notice the ...props which have been passed, it is needed to pass in the default props as well */}
+              {/* Also notice the usage of render instead of component to avoid re-mounting */}
+              {/* Refer = https://stackoverflow.com/a/43299633/6438526 */}
+              <Route
+                path="/specific/:id"
+                render={(props) => <SpecificCard theme={theme} {...props} />}
+                exact
+              ></Route>
+              <Route
+                path="/specific/tag/:id"
+                render={(props) => <Tag {...props} />}
+                exact
+              ></Route>
+            </Switch>
+          )}
+
           <Footer />
         </div>
       </HashRouter>
