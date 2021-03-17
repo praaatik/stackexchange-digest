@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/stackexchange-digest/static/css/main.5347b05d.chunk.css",
+    "main.css": "/stackexchange-digest/static/css/main.49220571.chunk.css",
     "main.js": "/stackexchange-digest/static/js/main.610e29ee.chunk.js",
     "main.js.map": "/stackexchange-digest/static/js/main.610e29ee.chunk.js.map",
     "runtime-main.js": "/stackexchange-digest/static/js/runtime-main.887b773e.js",
@@ -10,7 +10,7 @@
     "static/js/3.b84143c3.chunk.js": "/stackexchange-digest/static/js/3.b84143c3.chunk.js",
     "static/js/3.b84143c3.chunk.js.map": "/stackexchange-digest/static/js/3.b84143c3.chunk.js.map",
     "index.html": "/stackexchange-digest/index.html",
-    "static/css/main.5347b05d.chunk.css.map": "/stackexchange-digest/static/css/main.5347b05d.chunk.css.map",
+    "static/css/main.49220571.chunk.css.map": "/stackexchange-digest/static/css/main.49220571.chunk.css.map",
     "static/js/2.215a9ff0.chunk.js.LICENSE.txt": "/stackexchange-digest/static/js/2.215a9ff0.chunk.js.LICENSE.txt",
     "static/media/github-icon.95372804.svg": "/stackexchange-digest/static/media/github-icon.95372804.svg",
     "static/media/moon.230bed42.svg": "/stackexchange-digest/static/media/moon.230bed42.svg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.887b773e.js",
     "static/js/2.215a9ff0.chunk.js",
-    "static/css/main.5347b05d.chunk.css",
+    "static/css/main.49220571.chunk.css",
     "static/js/main.610e29ee.chunk.js"
   ]
 }
